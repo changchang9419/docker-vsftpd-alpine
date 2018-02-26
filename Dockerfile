@@ -52,6 +52,9 @@ RUN chmod +x /usr/sbin/vsftpd.sh \
     && useradd virtual -m -d /home/ftp/ -s /sbin/nologin \
     && chown -R virtual:virtual /home/ftp/
 
+COPY add-ftp-user.sh /usr/bin/add-ftp-user
+COPY set-admin-password.sh /usr/bin/set-admin-password
+
 VOLUME /home/ftp
 VOLUME /var/log/vsftpd
 

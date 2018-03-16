@@ -8,8 +8,8 @@ services:
       - "21:21"
       - "21100-21110:21100-21110"
     volumes:
-      - ~/vsftpd-data/:/home/ftp/:rw
-      - ~/vsftpd-data/log/:/var/log/vsftpd/:rw
+      - ~/docker/vsftpd-data/:/home/ftp/:rw
+      - ~/docker/vsftpd-data/log/:/var/log/vsftpd/:rw
     environment:
       - FTP_USER=admin
       - FTP_PASS=notneedhere

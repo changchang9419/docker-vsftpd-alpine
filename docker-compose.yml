@@ -2,6 +2,7 @@ version: "2.0"
 services:
   vsftpd:
     image: alpine-vsftpd
+    container_name: vsftpd
     build: .
     ports:
       - "20:20"
